@@ -22,14 +22,19 @@ export default function WhatsAppHero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-green-200">
+                        <a
+                            href="http://whatsapp.viknbooks.localhost:8085/"
+                            className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center justify-center space-x-2 shadow-lg shadow-green-200"
+                        >
                             <span className="font-semibold">Get Started Free</span>
                             <ChevronRight className="w-5 h-5" />
-                        </button>
+                        </a>
+
                         <button className="px-8 py-4 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition border-2 border-gray-200 font-semibold">
                             Watch Demo
                         </button>
                     </div>
+
 
                     <div className="mt-8 flex items-center space-x-6 text-sm text-gray-600">
                         <div className="flex items-center space-x-2">
