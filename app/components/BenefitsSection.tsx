@@ -11,27 +11,27 @@ export default function BenefitsSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6" />
+            <div className="w-12 h-12 bg-green-200 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+              <Zap className="w-6 h-6 text-green-700" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Quick Setup</h3>
-            <p className="text-green-100">Connect your tools in minutes with our simple configuration wizard. No technical expertise required.</p>
+            <h3 className="text-xl font-bold mb-3 text-green-700 text-green-700">Quick Setup</h3>
+            <p className="text-gray-500">Connect your tools in minutes with our simple configuration wizard. No technical expertise required.</p>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6" />
+            <div className="w-12 h-12 bg-green-200 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+              <Shield className="w-6 h-6 text-green-700" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Secure & Reliable</h3>
-            <p className="text-green-100">Enterprise-grade security with encrypted connections. Your data is always protected and private.</p>
+            <h3 className="text-xl font-bold mb-3 text-green-700">Secure & Reliable</h3>
+            <p className="text-gray-500">Enterprise-grade security with encrypted connections. Your data is always protected and private.</p>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
-              <Users className="w-6 h-6" />
+            <div className="w-12 h-12 bg-green-200 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+              <Users className="w-6 h-6 text-green-700" />
             </div>
-            <h3 className="text-xl font-bold mb-3">24/7 Support</h3>
-            <p className="text-green-100">Our dedicated support team is always ready to help you with setup and troubleshooting.</p>
+            <h3 className="text-xl font-bold mb-3 text-green-700">24/7 Support</h3>
+            <p className="text-gray-500">Our dedicated support team is always ready to help you with setup and troubleshooting.</p>
           </div>
         </div>
       </div>
