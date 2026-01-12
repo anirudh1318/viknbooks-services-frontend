@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || "/whatsapp";
+  const isExternal = /^https?:\/\//i.test(whatsappUrl);
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -19,12 +22,18 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#integrations" className="text-gray-600 hover:text-green-600 transition">Integrations</a>
-            <a href="#categories" className="text-gray-600 hover:text-green-600 transition">Categories</a>
-            <a href="#support" className="text-gray-600 hover:text-green-600 transition">Support</a>
-            <button className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-              Get Started
-            </button>
+            <Link href={"/#integrations"} className="text-gray-600 hover:text-green-600 transition">Integrations</Link>
+            <Link href={"/#categories"} className="text-gray-600 hover:text-green-600 transition">Categories</Link>
+            <Link href={"/#support"} className="text-gray-600 hover:text-green-600 transition">Support</Link>
+            {isExternal ? (
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                Get Started
+              </a>
+            ) : (
+              <Link href={whatsappUrl} className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                Get Started
+              </Link>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -39,12 +48,18 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden pb-4 space-y-3">
-            <a href="#integrations" className="block text-gray-600 hover:text-green-600">Integrations</a>
-            <a href="#categories" className="block text-gray-600 hover:text-green-600">Categories</a>
-            <a href="#support" className="block text-gray-600 hover:text-green-600">Support</a>
-            <button className="w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-              Get Started
-            </button>
+            <Link href={"/#integrations"} className="block text-gray-600 hover:text-green-600">Integrations</Link>
+            <Link href={"/#categories"} className="block text-gray-600 hover:text-green-600">Categories</Link>
+            <Link href={"/#support"} className="block text-gray-600 hover:text-green-600">Support</Link>
+            {isExternal ? (
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                Get Started
+              </a>
+            ) : (
+              <Link href={whatsappUrl} className="w-full px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                Get Started
+              </Link>
+            )}
           </div>
         )}
       </div>

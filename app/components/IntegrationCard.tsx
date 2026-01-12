@@ -1,16 +1,21 @@
+"use client";
+
+import Link from "next/link";
 import { Integration } from "@/lib/types";
 import { ChevronRight } from "lucide-react";
 
 interface IntegrationCardProps {
     integration: Integration;
-    onSelect?: (id: string) => void;
 }
 
-export default function IntegrationCard({ integration, onSelect }: IntegrationCardProps) {
-    return (
+export default function IntegrationCard({ integration }: IntegrationCardProps) {
+    // Use public env variable if available; falls back to internal route
+    const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || "/whatsapp";
+    const internalHref = `/integration/${integration.id}`;
+
+    const CardContent = (
         <div
-            className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer relative overflow-hidden"
-            onClick={() => integration.status === 'Available' && onSelect?.(integration.id)}
+            className={`bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group ${integration.status === 'Available' ? 'cursor-pointer' : 'cursor-not-allowed opacity-70'} relative overflow-hidden`}
         >
             {integration.popular && (
                 <div className="absolute top-4 right-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -30,10 +35,10 @@ export default function IntegrationCard({ integration, onSelect }: IntegrationCa
                 </span>
                 {integration.status === 'Available' ? (
                     integration.id === 'whatsapp' ? (
-                        <button className="flex items-center space-x-1 text-green-600 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                        <span className="flex items-center space-x-1 text-green-600 font-semibold text-sm group-hover:translate-x-1 transition-transform">
                             <span>Learn More</span>
                             <ChevronRight className="w-4 h-4" />
-                        </button>
+                        </span>
                     ) : (
                         <span className="text-green-600 font-semibold text-sm">Available</span>
                     )
@@ -42,5 +47,24 @@ export default function IntegrationCard({ integration, onSelect }: IntegrationCa
                 )}
             </div>
         </div>
+    );
+
+    // If Coming Soon, render inert card
+    if (integration.status !== 'Available') return <div>{CardContent}</div>;
+
+    // For WhatsApp, always open in a new tab (user requested new tab behavior)
+    if (integration.id === 'whatsapp') {
+        return (
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
+                {CardContent}
+            </a>
+        );
+    }
+
+    // Default: internal integration detail route
+    return (
+        <Link href={internalHref} className="block">
+            {CardContent}
+        </Link>
     );
 }
