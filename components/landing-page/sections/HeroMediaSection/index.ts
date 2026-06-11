@@ -1,0 +1,1 @@
+export { HeroMediaSection } from "./HeroMediaSection";

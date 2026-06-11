@@ -1,19 +1,20 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Providers } from "./providers";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "ViknBooks Services",
-  description: "ViknBooks Integration Hub",
+export const metadata: Metadata = {
+  title: "Viksapp",
+  description: "WhatsApp analytics dashboard with real-time messaging insights, engagement metrics, and growth tracking.",
+  icons: {
+    icon: "/assets/logos/viksapp-logo-2.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

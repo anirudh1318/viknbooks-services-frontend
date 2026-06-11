@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="114" viewBox="0 0 114 114">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.105" y1="0.899" x2="0.928" y2="-0.041" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ef8106"/>
+      <stop offset="1" stop-color="#d53700"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.276" y1="0.737" x2="1.034" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f68522"/>
+      <stop offset="1" stop-color="#ee4709"/>
+    </linearGradient>
+  </defs>
+  <g id="Rassasy" transform="translate(18869 -12818)">
+    <rect id="Rectangle_10822" data-name="Rectangle 10822" width="114" height="114" transform="translate(-18869 12818)" fill="#fff" opacity="0"/>
+    <g id="Group_2941" data-name="Group 2941" transform="translate(-18858.188 12818)">
+      <path id="Subtraction_6" data-name="Subtraction 6" d="M17.286,0A17.286,17.286,0,1,1,0,17.286,17.286,17.286,0,0,1,17.286,0Z" transform="translate(0.188 79.427)" fill="url(#linear-gradient)"/>
+      <path id="Union_11" data-name="Union 11" d="M63.63,107.683,50.773,91.806a46.52,46.52,0,0,1-4.749.242A46.024,46.024,0,0,1,0,46.024V25.676A25.676,25.676,0,0,1,25.676,0H46.024A46.024,46.024,0,0,1,77.952,79.173l8.271,10.215a14.536,14.536,0,1,1-22.594,18.3Z" transform="translate(0.225 0)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>
