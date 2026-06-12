@@ -64,7 +64,7 @@ export const FooterSection = () => {
                           if (element) {
                             element.scrollIntoView({ behavior: "smooth" });
                           } else {
-                            navigate.push(`/landing#${link.id}`);
+                            navigate.push(`/#${link.id}`);
                           }
                         }
                       }}

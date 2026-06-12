@@ -12,7 +12,7 @@ export const BlogSaasDetailsPage = () => {
         
         {/* Breadcrumb */}
         <div className="mb-6 hidden sm:flex items-center gap-2 text-[13px] font-medium text-[#666666]">
-          <Link href="/landing" className="hover:text-black transition-colors">Home</Link>
+          <Link href="/" className="hover:text-black transition-colors">Home</Link>
           <span className="text-[10px]">●</span>
           <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
           <span className="text-[10px]">●</span>

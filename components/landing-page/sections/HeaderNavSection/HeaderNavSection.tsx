@@ -41,7 +41,7 @@ export const HeaderNavSection = () => {
       <div className="mx-auto flex min-h-[70px] w-full max-w-[1512px] items-center px-4 sm:min-h-[97px] sm:px-8 lg:px-[126px]">
         {/* Left Section: Logo */}
         <div className="flex flex-1 items-center justify-start">
-          <a href="/landing" className="inline-flex shrink-0 items-center">
+          <a href="/" className="inline-flex shrink-0 items-center">
             <img
               className="h-8 w-auto sm:h-10"
               alt="Viksapp logo"
@@ -71,7 +71,7 @@ export const HeaderNavSection = () => {
                       element.scrollIntoView({ behavior: "smooth" });
                     } else {
                       // Navigate to landing page with hash
-                      navigate.push(`/landing#${item.id}`);
+                      navigate.push(`/#${item.id}`);
                     }
                   }
                 }}
@@ -123,7 +123,7 @@ export const HeaderNavSection = () => {
               {/* Replicated Header inside Sheet */}
               <div className="flex h-[70px] w-full items-center px-4 border-b border-[#e6e6e6]">
                 <div className="flex flex-1 items-center justify-start">
-                  <a href="/landing" className="inline-flex shrink-0 items-center">
+                  <a href="/" className="inline-flex shrink-0 items-center">
                     <img
                       className="h-8 w-auto sm:h-10"
                       alt="Viksapp logo"
@@ -175,7 +175,7 @@ export const HeaderNavSection = () => {
                                 if (element) {
                                   element.scrollIntoView({ behavior: "smooth" });
                                 } else {
-                                  navigate.push(`/landing#${item.id}`);
+                                  navigate.push(`/#${item.id}`);
                                 }
                               }
                             }, 300);

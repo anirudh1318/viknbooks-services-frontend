@@ -59,7 +59,9 @@ export const DemoBookingSection = () => {
               Start Your 7-Day Trial Today
             </h3>
             <Button
-
+              onClick={() => {
+                window.location.href = (process.env.NEXT_PUBLIC_GET_STARTED_URL || "https://accounts.viknbooks.com/signin?service=whatsapp");
+              }}
               className="h-[60px] w-full max-w-[400px] rounded-xl bg-[#0DF06C] px-5 py-2.5 font-['SF_Pro-Bold',Helvetica] text-[18px] font-bold tracking-[0] text-[#004c3d] hover:bg-[#0DF06C]/90"
             >
               Start 7 Day Free Trial
